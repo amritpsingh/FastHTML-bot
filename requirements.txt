@@ -1,0 +1,13 @@
+# requirements.txt
+
+requests==2.26.0
+beautifulsoup4==4.10.0
+tenacity==8.0.1
+tqdm==4.62.3
+pydantic==1.8.2
+langchain==0.0.184
+langchain-openai==0.0.2
+langchain-huggingface==0.0.3
+langchain-chroma==0.0.4
+psutil==5.8.0
+gputil==1.4.0

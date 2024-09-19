@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-4 max-w-lg mx-auto">
+    <h1>Chatbot Demo</h1>
+    <div id="chatlist" class="chat-box h-[73vh] overflow-y-auto">
+        {% for msg in messages %}
+            {{ msg | safe }}
+        {% endfor %}
+    </div>
+    <form hx-ext="ws" ws-connect="/wscon" class="flex space-x-2 mt-2">
+        <input type="text" name="msg" id="msg-input" placeholder="Type a message" class="input input-bordered w-full" hx-swap-oob="true">
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+</body>
+</html>
