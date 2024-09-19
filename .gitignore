@@ -1,3 +1,4 @@
+
 # Ignore all Jupyter Notebook checkpoints except fh_bot-checkpoint.ipynb
 .ipynb_checkpoints/*
 !.ipynb_checkpoints/fh_bot-checkpoint.ipynb
